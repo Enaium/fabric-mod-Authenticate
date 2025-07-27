@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "authenticate",
+  "version": "${version}",
+  "name": "Authenticate",
+  "description": "Authenticate player on server!",
+  "authors": [
+    "Enaium"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Enaium/fabric-mod-Authenticate",
+    "sources": "https://github.com/Enaium/fabric-mod-Authenticate",
+    "issues": "https://github.com/Enaium/fabric-mod-Authenticate/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/authenticate/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "cn.enaium.authenticate.Authenticate::initializer",
+      "cn.enaium.authenticate.command.CommandsKt::initializer"
+    ]
+  },
+  "mixins": [
+    "authenticate.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": "${minecraft_version}",
+    "java": ">=${java_version}",
+    "fabric-language-kotlin": "*",
+    "fabric-orm-jimmer": "*"
+  },
+  "suggests": {
+    "flamingo": "*",
+    "fabric-database-h2": "*"
+  }
+}

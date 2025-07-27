@@ -1,0 +1,15 @@
+{
+  "authenticate.command.register.password": "The password isn't the same.",
+  "authenticate.command.register.success": "Register successfully!",
+  "authenticate.command.register.unsuccess": "Register unsuccessfully!",
+  "authenticate.command.login.passwordIncorrect": "The password is incorrect.",
+  "authenticate.command.login.success": "Login successfully!",
+  "authenticate.command.login.unsuccess": "Login unsuccessfully!",
+  "authenticate.command.logout.success": "Logout successfully!",
+  "authenticate.command.ban.success": "Ban successfully!",
+  "authenticate.command.ban.unsuccess": "Ban unsuccessfully!",
+  "authenticate.command.ban.reason": "You have been banned!",
+  "authenticate.message.banned": "You have been banned!\nUntil %d second.",
+  "authenticate.message.unregistered": "You are an unregistered player. Use /r or /register to register, please",
+  "authenticate.message.unauthenticate": "You are an unauthenticate player. Use /l or /login to login, please"
+}

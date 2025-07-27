@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "cn.enaium.authenticate.mixin",
+  "compatibilityLevel": "JAVA_${java_version}",
+  "mixins": ${mixin_list},
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "Authenticate-refmap.json"
+}

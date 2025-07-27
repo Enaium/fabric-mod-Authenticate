@@ -1,0 +1,15 @@
+{
+  "authenticate.command.register.password": "密码不一致。",
+  "authenticate.command.register.success": "注册成功！",
+  "authenticate.command.register.unsuccess": "注册失败！",
+  "authenticate.command.login.passwordIncorrect": "密码错误。",
+  "authenticate.command.login.success": "登录成功！",
+  "authenticate.command.login.unsuccess": "登录失败！",
+  "authenticate.command.logout.success": "登出成功！",
+  "authenticate.command.ban.success": "封禁成功！",
+  "authenticate.command.ban.unsuccess": "封禁失败！",
+  "authenticate.command.ban.reason": "您已被封禁！",
+  "authenticate.message.banned": "您已被封禁！\n直到%d秒.",
+  "authenticate.message.unregistered": "您是一名未注册的玩家。请使用 /r 或 /register 命令进行注册",
+  "authenticate.message.unauthenticate": "您是一名未认证的玩家. 请使用 /l 或 /login 命令进行登录"
+} 

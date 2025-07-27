@@ -1,0 +1,17 @@
+[versions]
+kotlin = "1.13.4+kotlin.2.2.0"
+ksp = "2.2.0+"
+jimmer = "1.0.1+jimmer.0.9.100"
+jimmer-ksp = "0.9.100"
+h2 = "1.0.1+h2.2.3.232"
+gson = "2.2.4"
+
+[libraries]
+kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "kotlin" }
+jimmer = { module = "cn.enaium:fabric-orm-jimmer", version.ref = "jimmer" }
+jimmer-ksp = { module = "org.babyfish.jimmer:jimmer-ksp", version.ref = "jimmer-ksp" }
+h2 = { module = "cn.enaium:fabric-database-h2", version.ref = "h2" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+
+[plugins]
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
