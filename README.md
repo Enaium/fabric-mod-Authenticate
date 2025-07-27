@@ -1,5 +1,7 @@
 # Authenticate
 
+![minecraft_title](https://s2.loli.net/2025/07/27/sn4ucxUqjRKFSWa.png)
+
 [English](README.md) | [中文](README_zh.md)
 
 A Minecraft Fabric mod that provides player authentication functionality for servers.
@@ -39,7 +41,7 @@ management features.
 - `/register <password> <confirm>` - Register a new account
 - `/login <password>` - Login to your account
 - `/logout` - Logout from your account
-- `/ban <player> <unit> <amount>` - Ban a player (admin only)
+- `/auth ban <player> <unit> <amount>` - Ban a player (admin only)
 
 ### Registration Process
 
