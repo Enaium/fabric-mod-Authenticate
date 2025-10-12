@@ -36,8 +36,8 @@ val loomVersion: String by project
 val modPublishVersion: String by project
 
 dependencies {
-    api("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
-    api("net.fabricmc:fabric-loom:${loomVersion}")
-    api("net.legacyfabric:legacy-looming:${loomVersion}")
-    api("me.modmuss50.mod-publish-plugin:me.modmuss50.mod-publish-plugin.gradle.plugin:${modPublishVersion}")
+    api(libs.kotlin)
+    api(libs.loom)
+    api(libs.legacy.looming)
+    api(libs.publish)
 }

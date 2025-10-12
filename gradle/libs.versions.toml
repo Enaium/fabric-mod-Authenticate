@@ -1,17 +1,24 @@
 [versions]
-kotlin = "1.13.4+kotlin.2.2.0"
-ksp = "2.2.0+"
+kotlin = "2.2.20"
+fabricKotlin = "1.13.6+kotlin.2.2.20"
+ksp = "2.2.20+"
 jimmer = "1.0.1+jimmer.0.9.100"
 jimmer-ksp = "0.9.100"
 h2 = "1.0.1+h2.2.3.232"
 gson = "2.2.4"
+loom = "1.11-SNAPSHOT"
+publish = "0.8.4"
 
 [libraries]
-kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "kotlin" }
+fabric-kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "fabricKotlin" }
 jimmer = { module = "cn.enaium:fabric-orm-jimmer", version.ref = "jimmer" }
 jimmer-ksp = { module = "org.babyfish.jimmer:jimmer-ksp", version.ref = "jimmer-ksp" }
 h2 = { module = "cn.enaium:fabric-database-h2", version.ref = "h2" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+loom = { module = "net.fabricmc:fabric-loom", version.ref = "loom" }
+legacy-looming = { module = "net.legacyfabric:legacy-looming", version.ref = "loom" }
+publish = { module = "me.modmuss50.mod-publish-plugin:me.modmuss50.mod-publish-plugin.gradle.plugin", version.ref = "publish" }
 
 [plugins]
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

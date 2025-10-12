@@ -20,7 +20,7 @@ plugins {
 }
 
 dependencies {
-    implementation(libs.kotlin)
+    implementation(libs.fabric.kotlin)
     implementation(libs.jimmer)
     ksp(libs.jimmer.ksp)
     implementation(libs.h2)
