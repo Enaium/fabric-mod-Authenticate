@@ -25,6 +25,7 @@ dependencies {
     ksp(libs.jimmer.ksp)
     implementation(libs.h2)
     implementation(libs.gson)
+    implementation(libs.guava)
 }
 
 kotlin {

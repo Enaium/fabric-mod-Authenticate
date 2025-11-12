@@ -25,7 +25,7 @@ import com.google.gson.JsonObject
  * @author Enaium
  */
 fun i18n(key: String): String {
-    val lang: String? = Config.model.lang
+    val lang: String = Config.model.lang
     try {
         var url = object {}::class.java.getResource("/lang/$lang.json")
         if (url == null) {

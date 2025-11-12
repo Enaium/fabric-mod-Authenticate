@@ -28,6 +28,7 @@
     "fabricloader": "*",
     "minecraft": "${minecraft_version}",
     "java": ">=${java_version}",
+    "fabric-api": "*",
     "fabric-language-kotlin": "*",
     "fabric-orm-jimmer": "*"
   },

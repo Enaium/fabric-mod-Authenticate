@@ -119,6 +119,11 @@ The `Authenticate.json` file contains the following configuration options:
 - **Notes**:
     - Only modify if you understand database schema design
 
+#### `authExpire` (Long)
+
+- **Default**: `60000` (60 seconds)
+- **Description**: Time in milliseconds before a player is automatically logged out due to inactivity
+
 ### Example Configuration
 
 ```json

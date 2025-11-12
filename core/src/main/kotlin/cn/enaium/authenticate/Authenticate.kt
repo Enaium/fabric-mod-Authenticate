@@ -20,25 +20,36 @@ import cn.enaium.authenticate.event.Player
 import cn.enaium.authenticate.event.ServerCommandCallbacks
 import cn.enaium.authenticate.event.ServerPlayerCallbacks
 import cn.enaium.authenticate.event.impl.*
-import java.util.concurrent.CopyOnWriteArraySet
+import com.google.common.cache.CacheBuilder
+import java.util.concurrent.TimeUnit
 
 /**
  * @author Enaium
  */
 object Authenticate {
 
-    private val auth = CopyOnWriteArraySet<String>()
+    private val auth =
+        CacheBuilder<String, Player>.newBuilder().expireAfterWrite(Config.model.authExpire, TimeUnit.MILLISECONDS)
+            .build<String, Player>()
 
     fun login(player: Player) {
-        auth.add(player.key)
+        auth.put(player.key, player)
     }
 
     fun logout(player: Player) {
-        auth.remove(player.key)
+        auth.invalidate(player.key)
     }
 
     fun isAuthenticated(player: Player): Boolean {
-        return auth.contains(player.key)
+        val authed = auth.getIfPresent(player.key) != null
+        if (authed) {
+            refresh(player)
+        }
+        return authed
+    }
+
+    fun refresh(player: Player) {
+        login(player)
     }
 
     @JvmStatic

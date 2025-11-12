@@ -62,7 +62,7 @@ object Config {
         val jdbcUrl: String = "jdbc:h2:file:./db/authenticate",
         val username: String? = null,
         val password: String? = null,
-        val salt: String? = Base64.getEncoder().encodeToString(UUID.randomUUID().toString().toByteArray()),
+        val salt: String = Base64.getEncoder().encodeToString(UUID.randomUUID().toString().toByteArray()),
         val ddlStatement: String = """
             create table if not exists player_v0
             (
@@ -74,5 +74,6 @@ object Config {
                 banned timestamp
             );
         """.trimIndent(),
+        val authExpire: Long = 60000,
     )
 }
