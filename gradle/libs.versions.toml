@@ -1,13 +1,13 @@
 [versions]
-kotlin = "2.2.20"
-fabricKotlin = "1.13.6+kotlin.2.2.20"
-ksp = "2.2.20+"
+kotlin = "2.2.21"
+fabricKotlin = "1.13.7+kotlin.2.2.21"
+ksp = "2.2.21+"
 jimmer = "1.0.2+jimmer.0.9.115"
 jimmer-ksp = "0.9.115"
 h2 = "1.0.1+h2.2.3.232"
 gson = "2.2.4"
 guava = "15.0"
-loom = "1.11-SNAPSHOT"
+loom = "1.14-SNAPSHOT"
 publish = "0.8.4"
 
 [libraries]

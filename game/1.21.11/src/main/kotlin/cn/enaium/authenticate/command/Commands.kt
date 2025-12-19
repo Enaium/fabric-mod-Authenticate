@@ -31,6 +31,8 @@ import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback
 import net.minecraft.command.CommandRegistryAccess
 import net.minecraft.command.argument.EntityArgumentType.getPlayer
 import net.minecraft.command.argument.EntityArgumentType.player
+import net.minecraft.command.permission.Permission
+import net.minecraft.command.permission.PermissionLevel
 import net.minecraft.server.command.CommandManager
 import net.minecraft.server.command.CommandManager.argument
 import net.minecraft.server.command.CommandManager.literal
@@ -121,7 +123,7 @@ fun logout(dispatcher: CommandDispatcher<ServerCommandSource>) {
 }
 
 val ROOT: LiteralArgumentBuilder<ServerCommandSource> = literal("auth")
-    .requires { source: ServerCommandSource -> source.hasPermissionLevel(4) }
+    .requires { source: ServerCommandSource -> source.permissions.hasPermission(Permission.Level(PermissionLevel.OWNERS)) }
 
 fun ban(dispatcher: CommandDispatcher<ServerCommandSource>) {
     dispatcher.register(

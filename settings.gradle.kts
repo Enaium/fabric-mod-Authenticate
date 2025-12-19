@@ -16,7 +16,7 @@
 
 rootProject.name = "Authenticate"
 include(":core")
-include(":game:1.21.10")
+include(":game:1.21.11")
 include(":game:1.20.6")
 include(":game:1.19.4")
 include(":game:1.18.2")
