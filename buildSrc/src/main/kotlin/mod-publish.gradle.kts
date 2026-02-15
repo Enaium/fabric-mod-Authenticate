@@ -1,4 +1,5 @@
 import me.modmuss50.mpp.PublishModTask
+import org.gradle.util.internal.VersionNumber
 
 /*
  * Copyright 2025 Enaium
@@ -28,6 +29,8 @@ afterEvaluate {
         changelog = rootProject.file("changelog.md").readText(Charsets.UTF_8)
         modLoaders.add("fabric")
 
+        val modern = VersionNumber.parse(properties["minecraft.version"].toString()) >= VersionNumber.parse("1.14")
+
         curseforge {
             projectId = "1315021"
             accessToken = providers.gradleProperty("curseforge.token")
@@ -36,7 +39,7 @@ afterEvaluate {
                 "fabric-language-kotlin",
                 "fabric-database-h2",
                 "fabric-orm-jimmer",
-                if (parent?.name == "legacy") "legacy-fabric-api" else "fabric-api"
+                if (modern) "fabric-api" else "legacy-fabric-api"
             )
         }
 
@@ -48,7 +51,7 @@ afterEvaluate {
                 "fabric-language-kotlin",
                 "fabric-database-h2",
                 "fabric-orm-jimmer",
-                if (parent?.name == "legacy") "legacy-fabric-api" else "fabric-api"
+                if (modern) "fabric-api" else "legacy-fabric-api"
             )
         }
 

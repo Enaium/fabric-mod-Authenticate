@@ -26,6 +26,7 @@ dependencies {
     implementation(libs.h2)
     implementation(libs.gson)
     implementation(libs.guava)
+    implementation(libs.jackson)
 }
 
 kotlin {

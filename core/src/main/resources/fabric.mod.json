@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "authenticate",
-  "version": "${version}",
+  "version": "@version@",
   "name": "Authenticate",
   "description": "Authenticate player on server!",
   "authors": [
@@ -26,9 +26,8 @@
   ],
   "depends": {
     "fabricloader": "*",
-    "minecraft": "${minecraft_version}",
-    "java": ">=${java_version}",
-    "fabric-api": "*",
+    "minecraft": "@minecraft_version@",
+    "java": ">=@java_version@",
     "fabric-language-kotlin": "*",
     "fabric-orm-jimmer": "*"
   },

@@ -26,7 +26,7 @@ import java.util.*
 class ServerPlayerCallbacks {
     fun interface ConnectCallback {
         companion object {
-            val EVENT = Event<ConnectCallback> { listeners: List<ConnectCallback> ->
+            val EVENT = Event { listeners: List<ConnectCallback> ->
                 ConnectCallback { player, send ->
                     for (listener in listeners) {
                         listener.connect(player, send)
@@ -41,7 +41,7 @@ class ServerPlayerCallbacks {
     fun interface ChatMessageCallback {
         companion object {
             val EVENT =
-                Event<ChatMessageCallback> { listeners: List<ChatMessageCallback> ->
+                Event { listeners: List<ChatMessageCallback> ->
                     ChatMessageCallback { player, chat ->
                         for (listener in listeners) {
                             val cancel = listener.cancel(player, chat)
@@ -60,7 +60,7 @@ class ServerPlayerCallbacks {
     fun interface ActionCallback {
         companion object {
             val EVENT =
-                Event<ActionCallback> { listeners: List<ActionCallback> ->
+                Event { listeners: List<ActionCallback> ->
                     ActionCallback {
                         for (listener in listeners) {
                             val cancel = listener.cancel(it)
@@ -79,7 +79,7 @@ class ServerPlayerCallbacks {
     fun interface MoveCallback {
         companion object {
             val EVENT =
-                Event<MoveCallback> { listeners: List<MoveCallback> ->
+                Event { listeners: List<MoveCallback> ->
                     MoveCallback {
                         for (listener in listeners) {
                             val cancel = listener.cancel(it)
@@ -98,7 +98,7 @@ class ServerPlayerCallbacks {
     fun interface InteractBlockCallback {
         companion object {
             val EVENT =
-                Event<InteractBlockCallback> { listeners: List<InteractBlockCallback> ->
+                Event { listeners: List<InteractBlockCallback> ->
                     InteractBlockCallback {
                         for (listener in listeners) {
                             val cancel = listener.cancel(it)
@@ -117,7 +117,7 @@ class ServerPlayerCallbacks {
     fun interface InteractItemCallback {
         companion object {
             val EVENT =
-                Event<InteractItemCallback> { listeners: List<InteractItemCallback> ->
+                Event { listeners: List<InteractItemCallback> ->
                     InteractItemCallback {
                         for (listener in listeners) {
                             val cancel = listener.cancel(it)
@@ -136,7 +136,7 @@ class ServerPlayerCallbacks {
     fun interface InteractEntityCallback {
         companion object {
             val EVENT =
-                Event<InteractEntityCallback> { listeners: List<InteractEntityCallback> ->
+                Event { listeners: List<InteractEntityCallback> ->
                     InteractEntityCallback {
                         for (listener in listeners) {
                             val cancel = listener.cancel(it)
@@ -155,7 +155,7 @@ class ServerPlayerCallbacks {
     fun interface ExecuteCallback {
         companion object {
             val EVENT =
-                Event<ExecuteCallback> { listeners: List<ExecuteCallback> ->
+                Event { listeners: List<ExecuteCallback> ->
                     ExecuteCallback { player, command ->
                         for (listener in listeners) {
                             val cancel = listener.cancel(player, command)
@@ -174,7 +174,7 @@ class ServerPlayerCallbacks {
     fun interface TakeItemsCallback {
         companion object {
             val EVENT =
-                Event<TakeItemsCallback> { listeners: List<TakeItemsCallback> ->
+                Event { listeners: List<TakeItemsCallback> ->
                     TakeItemsCallback {
                         for (listener in listeners) {
                             val cancel = listener.value(it)
@@ -193,7 +193,7 @@ class ServerPlayerCallbacks {
     fun interface InvisibleCallback {
         companion object {
             val EVENT =
-                Event<InvisibleCallback> { listeners: List<InvisibleCallback> ->
+                Event { listeners: List<InvisibleCallback> ->
                     InvisibleCallback {
                         for (listener in listeners) {
                             val cancel = listener.value(it)
@@ -212,7 +212,7 @@ class ServerPlayerCallbacks {
     fun interface InvulnerableCallback {
         companion object {
             val EVENT =
-                Event<InvulnerableCallback> { listeners: List<InvulnerableCallback> ->
+                Event { listeners: List<InvulnerableCallback> ->
                     InvulnerableCallback {
                         for (listener in listeners) {
                             val cancel = listener.value(it)
@@ -233,7 +233,7 @@ class ServerCommandCallbacks {
     fun interface RegisterCallback {
         companion object {
             val EVENT =
-                Event<RegisterCallback> { listeners: List<RegisterCallback> ->
+                Event { listeners: List<RegisterCallback> ->
                     RegisterCallback { player, password, confirm, send ->
                         for (listener in listeners) {
                             listener.execute(player, password, confirm, send)
@@ -248,7 +248,7 @@ class ServerCommandCallbacks {
     fun interface LoginCallback {
         companion object {
             val EVENT =
-                Event<LoginCallback> { listeners: List<LoginCallback> ->
+                Event { listeners: List<LoginCallback> ->
                     LoginCallback { player, password, send ->
                         for (listener in listeners) {
                             listener.execute(player, password, send)
@@ -263,7 +263,7 @@ class ServerCommandCallbacks {
     fun interface LogoutCallback {
         companion object {
             val EVENT =
-                Event<LogoutCallback> { listeners: List<LogoutCallback> ->
+                Event { listeners: List<LogoutCallback> ->
                     LogoutCallback { player, send ->
                         for (listener in listeners) {
                             listener.execute(player, send)
@@ -278,7 +278,7 @@ class ServerCommandCallbacks {
     fun interface BanCallback {
         companion object {
             val EVENT =
-                Event<BanCallback> { listeners: List<BanCallback> ->
+                Event { listeners: List<BanCallback> ->
                     BanCallback { player, unit, amount, callback ->
                         for (listener in listeners) {
                             listener.execute(player, unit, amount, callback)

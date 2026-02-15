@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Enaium
+ * Copyright 2026 Enaium
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,11 +15,13 @@
  */
 
 plugins {
-    `fabric-loom`
-    id("common-fabric")
+    id("cn.enaium.fabric-multi-game")
 }
 
-dependencies {
-    mappings("net.fabricmc:yarn:${property("fabric.yarn.version")}:v2")
-    modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric.api.version")}")
+fmg {
+    common.set(project(":core"))
+}
+
+subprojects {
+    apply(plugin = "mod-publish")
 }

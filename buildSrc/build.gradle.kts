@@ -31,13 +31,10 @@ repositories {
     mavenCentral()
 }
 
-val kotlinVersion: String by project
-val loomVersion: String by project
-val modPublishVersion: String by project
-
 dependencies {
-    api(libs.kotlin)
-    api(libs.loom)
-    api(libs.legacy.looming)
-    api(libs.publish)
+    implementation(libs.kotlin)
+    implementation(libs.loom)
+    implementation(libs.legacy.looming)
+    implementation(libs.publish)
+    implementation(libs.fmg)
 }

@@ -1,14 +1,16 @@
 [versions]
-kotlin = "2.2.21"
-fabricKotlin = "1.13.7+kotlin.2.2.21"
+kotlin = "2.3.10"
+fabricKotlin = "1.13.9+kotlin.2.3.10"
 ksp = "2.2.21+"
-jimmer = "1.0.2+jimmer.0.9.115"
-jimmer-ksp = "0.9.115"
+jimmer = "1.0.2+jimmer.0.10.6"
+jimmer-ksp = "0.10.6"
 h2 = "1.0.1+h2.2.3.232"
 gson = "2.2.4"
 guava = "15.0"
-loom = "1.14-SNAPSHOT"
+loom = "1.15-SNAPSHOT"
 publish = "0.8.4"
+fmg = "0.0.1"
+jackson = "2.21.0"
 
 [libraries]
 fabric-kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "fabricKotlin" }
@@ -21,6 +23,8 @@ kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "
 loom = { module = "net.fabricmc:fabric-loom", version.ref = "loom" }
 legacy-looming = { module = "net.legacyfabric:legacy-looming", version.ref = "loom" }
 publish = { module = "me.modmuss50.mod-publish-plugin:me.modmuss50.mod-publish-plugin.gradle.plugin", version.ref = "publish" }
+fmg = { module = "cn.enaium.fabric-multi-game:cn.enaium.fabric-multi-game.gradle.plugin", version.ref = "fmg" }
+jackson = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
 
 [plugins]
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
