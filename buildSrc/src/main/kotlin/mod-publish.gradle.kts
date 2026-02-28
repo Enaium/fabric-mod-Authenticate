@@ -23,13 +23,14 @@ plugins {
 
 afterEvaluate {
     publishMods {
-        file = tasks.named<AbstractArchiveTask>("remapJar").get().archiveFile.get()
+        val disableObfuscation = properties.getOrDefault("fabric.loom.disableObfuscation", false).toString().toBoolean()
+        val minecraftVersion = properties["minecraft.version"].toString()
+        val modern = VersionNumber.parse(minecraftVersion) >= VersionNumber.parse("1.14")
+        file = tasks.named<AbstractArchiveTask>(if (disableObfuscation) "jar" else "remapJar").get().archiveFile.get()
         type = STABLE
         displayName = "Authenticate ${project.version}"
         changelog = rootProject.file("changelog.md").readText(Charsets.UTF_8)
         modLoaders.add("fabric")
-
-        val modern = VersionNumber.parse(properties["minecraft.version"].toString()) >= VersionNumber.parse("1.14")
 
         curseforge {
             projectId = "1315021"
@@ -62,7 +63,7 @@ afterEvaluate {
         }
 
         tasks.withType<PublishModTask>().configureEach {
-            dependsOn(tasks.named("remapJar"))
+            dependsOn(tasks.named(if (disableObfuscation) "jar" else "remapJar"))
         }
     }
 }
