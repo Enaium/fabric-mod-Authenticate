@@ -1,7 +1,7 @@
 [versions]
 kotlin = "2.3.10"
 fabricKotlin = "1.13.9+kotlin.2.3.10"
-ksp = "2.2.21+"
+ksp = "2.3.6"
 jimmer = "1.0.2+jimmer.0.10.6"
 jimmer-ksp = "0.10.6"
 h2 = "1.0.1+h2.2.3.232"
@@ -9,7 +9,7 @@ gson = "2.2.4"
 guava = "15.0"
 loom = "1.15-SNAPSHOT"
 publish = "0.8.4"
-fmg = "0.0.1"
+fmg = "0.0.5"
 jackson = "2.21.0"
 
 [libraries]
